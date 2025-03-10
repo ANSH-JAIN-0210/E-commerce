@@ -23,25 +23,25 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-menu ${mobileMenuOpen ? "nav-menu-active" : ""}`}>
-        <li>
+        <li className="list">
           <Link to="/" onClick={() => { setMenu("shop"); setMobileMenuOpen(false); }}>
             Shop
           </Link>
           {menu === "shop" ? <hr className="active-menu" /> : null}
         </li>
-        <li>
+        <li className="list">
           <Link to="/mens" onClick={() => { setMenu("mens"); setMobileMenuOpen(false); }}>
             Men
           </Link>
           {menu === "mens" ? <hr className="active-menu" /> : null}
         </li>
-        <li>
+        <li className="list">
           <Link to="/womens" onClick={() => { setMenu("womens"); setMobileMenuOpen(false); }}>
             Women
           </Link>
           {menu === "womens" ? <hr className="active-menu" /> : null}
         </li>
-        <li>
+        <li className="list">
           <Link to="/kids" onClick={() => { setMenu("kids"); setMobileMenuOpen(false); }}>
             Kids
           </Link>
