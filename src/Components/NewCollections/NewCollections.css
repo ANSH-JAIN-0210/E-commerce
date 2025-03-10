@@ -1,0 +1,119 @@
+.new-collections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  min-height: 90vh;
+  margin-bottom: 100px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1400px; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.new-collections h1 {
+  color: #171717;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.new-collections hr {
+  width: 180px;
+  height: 5px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+/* ✅ Prevents Expanding & Keeps It Responsive */
+.collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* ✅ Stops horizontal scrolling */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #f8f8f8;
+  width: 95%;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  max-width: 100%;
+}
+
+.item img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Fix for Laptop Screens */
+@media (max-width: 1400px) {
+  .collections {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-collections h1 {
+    font-size: 36px;
+  }
+
+  .collections {
+    gap: 15px;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-collections {
+    margin-bottom: 50px;
+  }
+
+  .new-collections h1 {
+    font-size: 30px;
+  }
+
+  .new-collections hr {
+    width: 150px;
+    height: 4px;
+  }
+
+  .collections {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-collections h1 {
+    font-size: 26px;
+  }
+
+  .new-collections hr {
+    width: 120px;
+    height: 3px;
+  }
+
+  .collections {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    max-width: 100%;
+  }
+}
